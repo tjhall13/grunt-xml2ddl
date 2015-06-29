@@ -1,0 +1,45 @@
+{
+  "name": "grunt-xml2ddl",
+  "description": "A grunt plugin for xml2ddl library.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tjhall13/grunt-xml2ddl",
+  "author": {
+    "name": "Trevor Hall",
+    "email": "trevdog98@hotmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tjhall13/grunt-xml2ddl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tjhall13/grunt-xml2ddl/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/tjhall13/grunt-xml2ddl/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-nodeunit": "^0.3.3"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "dependencies": {
+    "semaphore": "^1.0.3",
+    "xml2ddl": "^0.1.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
