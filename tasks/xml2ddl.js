@@ -16,9 +16,11 @@ var semaphore = {
 
 module.exports = function(grunt) {
     grunt.registerMultiTask('xml2ddl', 'A grunt plugin for xml2ddl library.', function() {
+        var done = this.async();
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-            syntax: 'mysql'
+            syntax: 'mysql',
+            prefix: ''
         });
         
         var sem, ddl;
@@ -29,11 +31,11 @@ module.exports = function(grunt) {
             
             file.src.forEach(function(filename) {
                 sem.take(1, function() {
-                    xml2ddl(filename, options.syntax, function(err, data) {
+                    xml2ddl(filename, options, function(err, data) {
                         if(!err) {
                             ddl = ddl.concat(data);
                         } else {
-                            grunt.fail(err);
+                            grunt.fail.fatal(err);
                         }
                         
                         sem.leave(1);
@@ -51,6 +53,7 @@ module.exports = function(grunt) {
                 grunt.file.write(file.dest, content);
                 
                 sem.leave(file.src.length);
+                done();
             });
         });
     });
