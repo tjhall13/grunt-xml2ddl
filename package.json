@@ -1,7 +1,7 @@
 {
   "name": "grunt-xml2ddl",
   "description": "A grunt plugin for xml2ddl library.",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "homepage": "https://github.com/tjhall13/grunt-xml2ddl",
   "author": {
     "name": "Trevor Hall",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "semaphore": "^1.0.3",
-    "xml2ddl": "^0.2.2"
+    "xml2ddl": "^0.2.3"
   },
   "keywords": [
     "gruntplugin"
